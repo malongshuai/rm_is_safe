@@ -2,7 +2,7 @@
 
 `rm_is_safe` makes your rm command more safer.
 
-![](https://www.junmajinlong.com/img/stuffs/a13-1588658636362.gif)
+![](https://camo.githubusercontent.com/aa9d3de2410659373bea8d468976a27380d543b5/68747470733a2f2f7777772e6a756e6d616a696e6c6f6e672e636f6d2f696d672f7374756666732f6131332d313538383635383633363336322e676966)
 
 # How it works
 
