@@ -1,9 +1,8 @@
 #!/bin/bash
 
-# 生成/bin/rm
-# 它将：
-#   1.创建/etc/security/rm_fileignore
-#   2.备份/bin/rm到/bin/rm.bak，并生成一个/bin/rm的shell脚本
+# generate /bin/rm
+#   1.create file: /etc/security/rm_fileignore
+#   2.backup /bin/rm to /bin/rm.bak
 function rm_is_safe(){
   [ -f /etc/security/rm_fileignore ] || touch /etc/security/rm_fileignore
   if [ ! -f /bin/rm.bak ];then
@@ -29,10 +28,10 @@ eof
   chmod +x /bin/rm
 }
 
-# 用于卸载
-# 卸载时，执行uninstall_rm_safe函数并重新登录bash
+# for uninstall rm_is_safe
+# function `uninstall_rm_safe` used for uninstall
 function un_rm(){
-  # 为所有用户以及未来新用户设置
+  # make efforts for all user
   if [ ! -f /etc/profile.d/rm_is_safe.sh ];then
     shopt -s nullglob
     for uh in /home/* /root /etc/skel;do

@@ -2,11 +2,18 @@
 
 `rm_is_safe` makes your rm command more safer.
 
+![](E:\onedrive\blog_imgs\a13-1588658636362.gif)
+
 # How it works
 
-`rm_is_safe` creates a shell script named `/bin/rm` which replaces the native rm(as the same time, it will backup the native rm command to `/bin/rm.bak`). So, how do you use `rm`, how do you use `rm_is_safe`. `rm_is_safe` will check your arguments, if arguments contains some important files or directories, it will skip your rm command.
+`rm_is_safe` creates a shell script named `/bin/rm` which replaces the native rm(at the same time, it will backup the native rm command to `/bin/rm.bak`). So, how do you use `rm`, how do you use `rm_is_safe`. 
 
-What files is important? 
+`rm_is_safe` will check all arguments after `rm`, if arguments contains some important files, it will skip your rm command.
+
+`rm_is_safe` is effective for all users(already exists or future newuser).
+
+# Which file is important?
+
 1. `/` and subfiles or subdirs under `/`, these files always be protected  
 2. also you can specify important files in `/etc/security/rm_fileignore`, one file path one line. like below: 
 
@@ -26,7 +33,7 @@ All files specified in this file will be protected, you can't detele them with `
 
 1.git clone or copy the shell script to your host
 ```
-git clone rm_is_safe
+git clone https://github.com/malongshuai/rm_is_safe.git
 ```
 
 2.Execute rm_is_safe.sh
