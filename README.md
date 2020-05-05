@@ -1,5 +1,7 @@
 # rm_is_safe
 
+[English | [简体中文](https://github.com/malongshuai/rm_is_safe/blob/master/README_CN.md)]
+
 `rm_is_safe` makes your rm command more safer.
 
 ![](https://www.junmajinlong.com/img/stuffs/a13-1588658636362.gif)
@@ -33,22 +35,24 @@ All files specified in this file will be protected, you can't detele them with `
 
 1.git clone or copy the shell script to your host
 ```
-git clone https://github.com/malongshuai/rm_is_safe.git
+$ git clone https://github.com/malongshuai/rm_is_safe.git
 ```
 
 2.Execute rm_is_safe.sh
 ```
-sudo bash rm_is_safe.sh
+$ cd rm_is_safe
+$ sudo bash rm_is_safe.sh
 ```
 
 Now, your rm is safe.
 
 3.If you really want to remove protected files, you can use `/bin/rm.bak`, it is the native rm command.
 ```
-rm.bak /path/to/file
+$ rm.bak /path/to/file
 ```
 
-4.if you want to uninstall `rm_is_safe`, execute function `uninstall_rm_is_safe`:
+4.If you want to uninstall `rm_is_safe`, execute function `uninstall_rm_is_safe`:
+
 ```
 # if uninstall_rm_is_safe command is not found, `exec bash` first
 $ uninstall_rm_is_safe
