@@ -2,7 +2,7 @@
 
 `rm_is_safe` makes your rm command more safer.
 
-![](E:\onedrive\blog_imgs\a13-1588658636362.gif)
+![](https://www.junmajinlong.com/img/stuffs/a13-1588658636362.gif)
 
 # How it works
 
