@@ -28,8 +28,10 @@ All files specified in this file will be protected, you can't detele them with `
 
 **Notes:**  
 1. Obviously, there is no recursion here. So, '/bin' is safe, but '/bin/aaa' is not safe in default  
-2. Paths you defined in /etc/security/rm_fileignore can trail slashs, both '/home/junmajinlong' and '/home///junmajinlong/////' are valid  
-3. Don't use wildcard in the paths you defined in /etc/security/rm_fileignore  
+2. There is no need to add root `/` or subdirs under `/` to /etc/security/rm_fileignore  
+3. Paths you defined in /etc/security/rm_fileignore can trail slashs, both '/home/junmajinlong' and '/home///junmajinlong/////' are valid  
+4. Don't use wildcard in the paths you defined in /etc/security/rm_fileignore  
+5. Don't define relative path in /etc/security/rm_fileignore  
 
 # Usage
 

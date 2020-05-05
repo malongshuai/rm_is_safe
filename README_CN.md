@@ -29,8 +29,10 @@
 **注意事项:**  
 
 1. 显然，被保护的目录是不会进行递归的，所以'/bin'是安全的，而'/bin/aaa'是不安全的，除非你将它加入/etc/security/rm_fileignore文件中  
-2. /etc/security/rm_fileignore文件中定义的路径可以包含任意斜线，`rm_is_safe`会自动处理。所以，'/home/junmajinlong'和'/home///junmajinlong/////'都是有效路径  
-3. /etc/security/rm_fileignore中定义的路径中不要使用通配符，例如`/home/*`是无效的  
+2. 根目录`/`以及根目录下的子目录是自动被保护的，不用手动将它们添加到/etc/security/rm_fileignore中  
+3. /etc/security/rm_fileignore文件中定义的路径可以包含任意斜线，`rm_is_safe`会自动处理。所以，'/home/junmajinlong'和'/home///junmajinlong/////'都是有效路径  
+4. /etc/security/rm_fileignore中定义的路径中不要使用通配符，例如`/home/*`是无效的  
+5. /etc/security/rm_fileignore中不要定义相对路径，要定义绝对路径  
 
 # Usage
 
