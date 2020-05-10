@@ -15,7 +15,7 @@ function rm_is_safe(){
 args=$(echo "$*" | tr -s '/' | tr -d "\042\047" )
 
 safe_files=$(find / -maxdepth 1 | tr '\n' '|')$(cat /etc/security/rm_fileignore | tr '\n' '|')
-echo "$args" | grep -qP "(?:${safe_files%|})(?:/?(?=\s|$))"
+echo "$args" | grep -qP "(?:^${safe_files%|})(?:/?(?=\s|$))"
 
 if [ $? -eq 0 ];then
   echo -e "'\e[1;5;33mrm $args\e[0m' is not allowed,Exit..."
